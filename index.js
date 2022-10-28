@@ -51,13 +51,14 @@ const io = require("socket.io")(server, {
 
 app.use(cors());
 
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.get("/", (req, res) => {
     res.send("Server is running.");
 })
 
-server.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+server.listen(process.env.PORT || PORT, () => console.log(`Server listening on port ${PORT}`));
 
 io.on("connection", (socket) => {
     socket.emit('me', socket.id);
