@@ -28,7 +28,7 @@ const mysql = require('mysql2');
 const userRoute = require('./routes/routes');
 app.use('/video', userRoute);
 
-const db = require('./models');
+const db = require('./models/index.js');
 
 db.sequelize.sync().then((req) => {
     console.log('connected!');
