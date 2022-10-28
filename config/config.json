@@ -21,5 +21,3 @@
     "dialect": "mysql"
   }
 }
-
-mysql://bd3f82ab9e98ed:176506d5@us-cdbr-east-06.cleardb.net/heroku_25bc1521b51c03c?reconnect=true
