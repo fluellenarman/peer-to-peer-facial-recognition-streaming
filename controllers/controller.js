@@ -1,11 +1,11 @@
-// const {session } = require("../models")
-const {userid_record} = require("../models")
-const {session_record} = require("../models")
+const {session } = require("../models/session.js")
+const {userid_record} = require("../models/UserId_record.js")
+const {session_record} = require("../models/session_record.js")
 
 module.exports = {
 async get2(req,res) {
 	try {
-		// console.log(session)
+		console.log(session)
 		res.send("HELLO")
 	} catch (err) {
 		res.status(500).send({
