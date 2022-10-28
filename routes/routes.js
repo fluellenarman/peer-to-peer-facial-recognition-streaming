@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router()
 
 const controller = require('../controllers/controller')
-const {UserID_Record} = require('../models');
+const {UserID_Record} = require('../models/UserId_record.js');
 // router.get('/test1', controller.get)
 router.get('/test2', controller.get2)
 
