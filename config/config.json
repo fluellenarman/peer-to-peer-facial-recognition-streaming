@@ -16,8 +16,10 @@
   "production": {
     "username": "bd3f82ab9e98ed",
     "password": "176506d5",
-    "database": "database_production",
+    "database": "heroku_25bc1521b51c03c",
     "host": "us-cdbr-east-06.cleardb.net",
-    "dialect": "heroku_25bc1521b51c03c"
+    "dialect": "mysql"
   }
 }
+
+mysql://bd3f82ab9e98ed:176506d5@us-cdbr-east-06.cleardb.net/heroku_25bc1521b51c03c?reconnect=true
