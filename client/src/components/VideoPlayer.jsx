@@ -53,10 +53,14 @@ const VideoPlayer = () => {
     useEffect(() => {
         const loadModels = () => {
             Promise.all([
-                faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-                faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-                faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-                faceapi.nets.faceExpressionNet.loadFromUri('/models')
+                // faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+                // faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
+                // faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
+                // faceapi.nets.faceExpressionNet.loadFromUri('/models')
+                faceapi.loadTinyFaceDetectorModel('/models'),
+                faceapi.loadFaceExpressionModel('/models'),
+                faceapi.loadFaceRecognitionModel('/models'),
+                faceapi.loadFaceLandmarkModel('/models')
             ])
             .then()
             .catch(e=>console.log(e))
