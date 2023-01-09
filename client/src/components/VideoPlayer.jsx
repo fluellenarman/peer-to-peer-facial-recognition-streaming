@@ -22,12 +22,15 @@ import * as faceapi from "face-api.js";
 
 const useStyles = makeStyles((theme) => ({
     video: {
-      width: '550px',
+      width: '560px',
+      marginLeft: 'auto', marginRight: 'auto',
       [theme.breakpoints.down('xs')]: {
         width: '300px',
       },
     },
     gridContainer: {
+    //   height: 'auto',
+    // position: 'static',
       justifyContent: 'center',
       [theme.breakpoints.down('xs')]: {
         flexDirection: 'column',
@@ -79,7 +82,10 @@ const VideoPlayer = () => {
     }
     var test = () => {
         setInterval(async() => {
-            var video = document.getElementById('video')
+            var video = document.getElementById('video');
+            var canvas1 = document.getElementById('canvas1');
+            canvas1.style.top = `${video.offsetTop}px`;
+
             canvasRef.current.innerHTML = faceapi.createCanvasFromMedia(video)
             canvasRef.current.style.right = myVideo.current.getBoundingClientRect().right+'px'
             canvasRef.current.style.left = myVideo.current.getBoundingClientRect().left+'px'
@@ -142,8 +148,6 @@ const VideoPlayer = () => {
             console.log(111);
         }, 100)
     })
-
-
     
     return (
         <Grid container className={classes.gridContainer}>
@@ -158,9 +162,12 @@ const VideoPlayer = () => {
                         autoPlay
                         width="720" height="560" 
                     />
-                    <canvas ref={canvasRef} className="position-absolute"/>
-                    </div>
+                    <canvas ref={canvasRef} id='canvas1'/>
                     <Button onClick={test} variant="contained" color="primary" fullWidth></Button>
+                    
+                    
+                    </div>
+                    
                 </Grid>
             </Paper>
         )}

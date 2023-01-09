@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '600px',
-		border: '2px solid black',
+		// border: '2px solid black',
+		border: '3px solid red',
+		position: 'static',
 
 		[theme.breakpoints.down('xs')]: {
 			width: '90%',
@@ -34,10 +36,14 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: '15px',
 	},
 	wrapper: {
+		// margin: '0 0 0 0 ',
+		// marginTop: '25%',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		width: '100%',
+		// height: '100px',
+		border: '3px solid red',
 	},
 }));
 
@@ -54,20 +60,22 @@ const App = () => {
 
 	return (
 		<div className={classes.wrapper}>
-			<AppBar className = {classes.appBar} position="static" color="inherit">
+			
+			{/* <AppBar className = {classes.appBar} position="relative" color="inherit">
 				<Typography variant="h2" align="center">
 					Powered by webRTC
 				</Typography>
-			</AppBar>
+			</AppBar> */}
+			
 
 			<VideoPlayer />
 			
 			<Options>
 				<Notifications />
 			</Options>
-			<Button variant="contained" color="primary" onClick={test}>
+			{/* <Button variant="contained" color="primary" onClick={test}>
 				test
-			</Button>
+			</Button> */}
 			{/* {callAccepted && (
 					<Texting />
 			)} */}
