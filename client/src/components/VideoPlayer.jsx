@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import {Grid, Typography, Paper, Button } from "@material-ui/core";
 import {makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+
 
 import { SocketContext } from "../SocketContext";
 
@@ -163,12 +165,15 @@ const VideoPlayer = () => {
                         width="720" height="560" 
                     />
                     <canvas ref={canvasRef} id='canvas1'/>
-                    <Button onClick={test} variant="contained" color="primary" fullWidth></Button>
-                    
                     
                     </div>
                     
                 </Grid>
+                <Box textAlign='center'>
+                    <Button onClick={test} variant="contained" color="primary" 
+                    align="center" marginLeft='auto'>Start</Button>
+                </Box>
+                
             </Paper>
         )}
             

@@ -1,11 +1,15 @@
 import React, { useContext } from 'react'
-import { Typography, AppBar, FormControl, Button, TextField, Container } from '@material-ui/core';
+import { Typography, AppBar, Toolbar, FormControl, Button, TextField, Container } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
+
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import VideoPlayer from './components/VideoPlayer';
 import Notifications from './components/Notifications';
 import Options from './components/Options';
 import Texting from './components/Texting';
+import AppBar1 from './components/appBar';
 
 import {SocketContext} from './SocketContext';
 
@@ -38,12 +42,13 @@ const useStyles = makeStyles((theme) => ({
 	wrapper: {
 		// margin: '0 0 0 0 ',
 		// marginTop: '25%',
+		// position: 'fixed',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		width: '100%',
 		// height: '100px',
-		border: '3px solid red',
+		// border: '3px solid red',
 	},
 }));
 
@@ -60,29 +65,13 @@ const App = () => {
 
 	return (
 		<div className={classes.wrapper}>
-			
-			{/* <AppBar className = {classes.appBar} position="relative" color="inherit">
-				<Typography variant="h2" align="center">
-					Powered by webRTC
-				</Typography>
-			</AppBar> */}
-			
+			<AppBar1 />
 
 			<VideoPlayer />
 			
 			<Options>
 				<Notifications />
 			</Options>
-			{/* <Button variant="contained" color="primary" onClick={test}>
-				test
-			</Button> */}
-			{/* {callAccepted && (
-					<Texting />
-			)} */}
-			{/* <FormControl>
-					<TextField id="standard-basic" label="text" variant="outlined" />
-					<Button type='submit' variant="contained" color="primary">Send</Button>
-			</FormControl> */}
 			
 		</div>
 	)

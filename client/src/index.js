@@ -11,11 +11,11 @@ import { ContextProvider } from "./SocketContext";
 
 ReactDOM.render(
 	<ContextProvider>
-		<AppBar class='appBar'>
+		{/* <AppBar class='appBar'>
 			<Typography variant='h6' align='center'>
 				Powered by webRTC
 			</Typography>
-		</AppBar>
+		</AppBar> */}
 
 		{/* <ContextProvider2> */}
 		<App />

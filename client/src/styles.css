@@ -23,7 +23,7 @@ body {
 
 canvas {
   position: absolute;
-  top: inherit;
+  /* top: inherit; */
   left: 0;
   /* z-index: 10; */
 
@@ -47,7 +47,7 @@ canvas {
   align-items: center;
   width: 600px;
   border: 2px solid black;
-  position: sticky;
+  position: fixed;
   top: 20px;
   height: auto;
 }
